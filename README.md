@@ -36,6 +36,7 @@ This challenge is about building models that don’t just perform, but also unde
 
 ## The dataset: iWildCam
 ![plot](iwildcam.jpg)
+*Photo credit: [iWildCam challenge](https://github.com/visipedia/iwildcam_comp/tree/master)
 You’ll be working with images collected from camera traps around the world. Some environments you’ve seen before (in-distribution), and some are completely new (out-of-distribution—surprise!).
 Animals may appear:
 - Centered… or as a tiny blur in the corner
