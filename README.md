@@ -35,6 +35,7 @@ This challenge is about building models that don’t just perform, but also unde
 - **Climb the leaderboard:** Scores are combined via Borda count, so consistency beats one-trick ponies.
 
 ## The dataset: iWildCam
+![iWildCam example]([http://url/to/img.png](https://ar5iv.labs.arxiv.org/html/2004.10340/assets/Figures/101.jpg))
 **TODO: Write about the split and details on training, test, and final test set!**
 
 ## How to get started
