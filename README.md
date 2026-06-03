@@ -36,21 +36,16 @@ This challenge is about building models that don’t just perform, but also unde
 
 ## The dataset: iWildCam
 ![plot](iwildcam.jpg)
-**TODO: Write about the split and details on training, test, and final test set!**
+You’ll be working with images collected from camera traps around the world. Some environments you’ve seen before (in-distribution), and some are completely new (out-of-distribution—surprise!).
+Animals may appear:
+- Centered… or as a tiny blur in the corner
+- In daylight… or in mysterious infrared night mode
+- Alone… or photobombed
+Nature doesn’t care about your training distribution—and now neither does this challenge.
 
-## How to get started
-You are given a starter codebase, a labeled training and validation set, and an unlabeled `test_public` set. You will train a classifier, produce a `submission.csv`, and upload it. The server scores your submission on four metrics; the leaderboard aggregates them via Borda count.
-
-### 1. Install
-
-```bash
-pip install -r requirements.txt
-```
-
-This installs `torch`, `torchvision`, `pandas`, `numpy`, `pillow`, `tqdm`.
-No `wilds`, no `scikit-learn` — the local evaluator is self-contained.
-
-### 2. Where to put the data
+## Preparing for the challenge
+- Please download the challenge image data before the challenge **TODO: Link for download**
+- Place the data on a cluster that you will have access to during the challenge.
 
 Unzip the release so the layout is:
 
@@ -76,7 +71,20 @@ challenge_data/
 - `sample_submission.csv` covers every uid across both test splits with uniform `1/K` probabilities — a working format reference.
 - `class_mapping.json` carries `num_classes` (`K`) and the mapping between contiguous `[0, K-1]` labels and the original WILDS class ids.
 
-### 3. Train your baseline
+## How to get started
+You are given a starter codebase, a labeled training and validation set, and an unlabeled `test_public` set. You will train a classifier, produce a `submission.csv`, and upload it. The server scores your submission on four metrics; the leaderboard aggregates them via Borda count.
+
+### 1. Install
+
+```bash
+pip install -r requirements.txt
+```
+
+This installs `torch`, `torchvision`, `pandas`, `numpy`, `pillow`, `tqdm`.
+No `wilds`, no `scikit-learn` — the local evaluator is self-contained.
+
+
+### 2. Train your baseline
 
 ```bash
 python -m student.train \
@@ -100,7 +108,7 @@ Both checkpoints share the same format — a dict containing `state_dict`,
 `--backbone resnet18` or `--backbone vit_base_patch16_224`); pass
 `--pretrained` to start from timm's published weights.
 
-### 4. Evaluate locally
+### 3. Evaluate locally
 
 ```bash
 python -m student.eval \
@@ -118,7 +126,7 @@ Prints the same five numbers the server will compute:
 
 The local metrics are bit-for-bit equivalent to the server. Use them to iterate before submitting.
 
-### 5. Generate a submission
+### 4. Generate a submission
 
 ```bash
 python -m student.predict \
@@ -127,7 +135,7 @@ python -m student.predict \
     --output submission.csv
 ```
 
-### 6. Submission format
+### 5. Submission format
 
 **One row per `uid` across `test_public/images/` and `test_private/images/`.**
 Columns:
