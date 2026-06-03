@@ -27,11 +27,11 @@ This challenge is about building models that don’t just perform, but also unde
 - **Calibrate like a pro:** Make your probabilities trustworthy—not just numerically convenient.
 - **Embrace the unknown:** Handle domain shifts (new camera locations, lighting, environments).
 - **Battle the metrics:** It’s not just about accuracy—your model will be judged on:
-Accuracy (obviously)
-Calibration (ECE)
-Negative log-likelihood (NLL)
-Brier score
-Misclassification AUROC (a fancy way of asking: does your model know when it’s wrong?)
+  - Accuracy (obviously)
+  - Calibration (ECE)
+  - Negative log-likelihood (NLL)
+  - Brier score
+  - Misclassification AUROC (a fancy way of asking: does your model know when it’s wrong?)
 - **Climb the leaderboard:** Scores are combined via Borda count, so consistency beats one-trick ponies.
 
 ## The dataset: iWildCam
@@ -145,7 +145,7 @@ uid, p_0, p_1, ..., p_{K-1}
 `1/K` probabilities — it will be accepted by the server (just very badly
 scored).
 
-## 7. Survival tips for the Wild
+## Survival tips for the Wild
 Concrete suggestions for starting points:
 - **Temperature scaling** is already in the baseline; try alternative calibration objectives (Brier instead of NLL).
 - **Deep ensembles** — train N models, average their probabilities.
