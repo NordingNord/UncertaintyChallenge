@@ -1,3 +1,12 @@
+Current task:
+
+Benjamin: Get cluster up and running
+
+
+
+
+
+
 # Summer School Challenge 2026 — Predictive Uncertainty on iWildCam
 Welcome to the Predictive Uncertainty Challenge 2026, where deep learning meets the wild… and occasionally gets very unsure about what it just saw.
 In this year’s summer school challenge, you’re not just building a model that says “this is a zebra”—you’re building a model that can confidently say “this is a zebra… and I’m 93% sure.” Because in the real world, confidence matters just as much as correctness.
