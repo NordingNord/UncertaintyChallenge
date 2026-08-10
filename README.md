@@ -46,7 +46,7 @@ Animals may appear:
 Nature doesn’t care about your training distribution—and now neither does this challenge.
 
 ## Preparing for the challenge
-Please download the challenge image data before the challenge **TODO: Link for download**
+Please download the challenge image data before the challenge http://fungi.compute.dtu.dk:8080/login
 Place the data on a cluster that you will have access to during the challenge.
 
 Unzip the release so the layout is:
